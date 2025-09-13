@@ -6,7 +6,7 @@
 /*   By: jtertuli <jtertuli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/12 11:20:40 by jtertuli          #+#    #+#             */
-/*   Updated: 2025/09/12 17:23:13 by jtertuli         ###   ########.fr       */
+/*   Updated: 2025/09/13 11:44:55 by jtertuli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ void	ft_setup_hooks(t_vars *vars)
 {
 	mlx_hook(vars->win, ON_DESTROY, 0, ft_x_close_win, vars);
 	mlx_key_hook(vars->win, ft_esc_close_win, vars);
-	mlx_hook(vars->win, MOUSE_BUTTON_PRESS_EVENT, MOUSE_BUTTON_PRESS_MASK, \
+	mlx_hook(vars->win, MOUSE_BUTTON_PRESS_EVENT, MOUSE_BUTTON_PRESS_MASK << 2, \
 		ft_mouse_event_handler, vars);
 }

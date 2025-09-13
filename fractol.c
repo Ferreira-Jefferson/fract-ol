@@ -6,7 +6,7 @@
 /*   By: jtertuli <jtertuli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 15:32:39 by jtertuli          #+#    #+#             */
-/*   Updated: 2025/09/12 17:24:26 by jtertuli         ###   ########.fr       */
+/*   Updated: 2025/09/13 08:50:16 by jtertuli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ int	main(int argc, char *argv[])
 	}
 	return (ft_fractol(argv, &vars));
 }
-#include <stdio.h>
-static int ft_get_values_julia(t_vars *vars, char *value_1, char *value_2)
+
+static int	ft_get_values_julia(t_vars *vars, char *value_1, char *value_2)
 {
 	const char	*end;
 
@@ -48,14 +48,14 @@ int	ft_validate_input(int argc, char *argv[], t_vars *vars)
 		return (1);
 	vars->fractol_name = ft_str_tolower(name_trim);
 	free(name_trim);
-	if (ft_isequal(vars->fractol_name , "mandelbrot"))
+	if (ft_isequal(vars->fractol_name, "mandelbrot"))
 	{
 		vars->c_real = 0;
 		vars->c_imag = 0;
 		return (0);
 	}
-	if (ft_isequal(vars->fractol_name , "julia") && argc == 4)
-		return (ft_get_values_julia(vars, argv[2],  argv[3]));
+	if (ft_isequal(vars->fractol_name, "julia") && argc == 4)
+		return (ft_get_values_julia(vars, argv[2], argv[3]));
 	return (1);
 }
 

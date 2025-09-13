@@ -6,7 +6,7 @@
 /*   By: jtertuli <jtertuli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/12 11:34:12 by jtertuli          #+#    #+#             */
-/*   Updated: 2025/09/13 07:51:49 by jtertuli         ###   ########.fr       */
+/*   Updated: 2025/09/13 08:48:22 by jtertuli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,15 @@
 
 int	ft_create_trgb(double iter)
 {
-	int	r;
-	int	g;
-	int	b;
+	int		r;
+	int		g;
+	int		b;
+	double	frequency;
 
-	r = (int)(sin(0.1 * iter) * 127 + 128);
-	g = (int)(sin(0.1 * iter + 2.0) * 127 + 128);
-	b = (int)(sin(0.1 * iter + 4.0) * 127 + 128);
-
-    // CORREÇÃO IMPORTANTE:
-    // O padrão para cores TRGB de 32 bits é 8 bits para cada canal.
-    // Transparência (T): bits 24-31
-    // Vermelho (R): bits 16-23
-    // Verde (G): bits 8-15
-    // Azul (B): bits 0-7
-    // A sua versão anterior deslocava G e B incorretamente.
+	frequency = 0.1;
+	r = (int)(sin(frequency * iter + 0.0) * 127.5 + 127.5);
+	g = (int)(sin(frequency * iter + 2.0) * 127.5 + 127.5);
+	b = (int)(sin(frequency * iter + 4.0) * 127.5 + 127.5);
 	return (0 << 24 | r << 16 | g << 8 | b);
 }
 
