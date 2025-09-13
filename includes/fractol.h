@@ -5,6 +5,7 @@
 # include "../minilibx/mlx.h"
 
 # include <stdlib.h>
+# include <math.h>
 
 # define MOUSE_BUTTON_PRESS_EVENT (4)
 # define MOUSE_BUTTON_PRESS_MASK (1L<<2)
@@ -18,7 +19,7 @@ typedef struct s_vars t_vars;
 typedef struct s_vars {
 	void 	*mlx;
 	void 	*win;
-	char 	*fractal_name;
+	char 	*fractol_name;
 	void	*img;
 	char	*addr;
 	int		bits_per_pixel;
@@ -30,16 +31,24 @@ typedef struct s_vars {
 	double	offset_x;
 	double	offset_y;
 	int		max_iterations;
-    double	julia_c_real;
-    double	julia_c_imag;
+    double	c_real;
+    double	c_imag;
 } t_vars;
 
+typedef struct s_fractal_result {
+	int		iter;
+	double	z_real;
+	double	z_imag;
+}	t_fractal_result;
+
 # include "utils.h"
-# include "mandelbrot.h"
 # include "utils_setup.h"
 # include "utils_control.h"
+# include "utils_fractol.h"
 
-int ft_fractol(char *argv[]);
-int	ft_validate_input(int argc, char *argv[]);
+int	ft_fractol(char *argv[], t_vars *vars);
+int	ft_validate_input(int argc, char *argv[], t_vars *vars);
+
+
 
 #endif

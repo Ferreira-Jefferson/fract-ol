@@ -12,7 +12,7 @@ INCLUDES = includes
 MLX_PATH = minilibx
 LIBFT_PATH = libft
 
-SRC_FILES = fractol.c utils.c mandelbrot.c utils_control.c utils_setup.c
+SRC_FILES = fractol.c utils.c utils_fractol.c utils_control.c utils_setup.c
 
 OBJ_FILES = $(addprefix $(OBJ_DIR)/, $(SRC_FILES:.c=.o))
 
@@ -23,7 +23,7 @@ INCLUDE_DIR = -I$(INCLUDES) -I$(LIB_DIR)
 all: $(NAME)
 
 $(NAME): $(OBJ_FILES) $(LIBFT) $(MLX)
-	@$(CC) $(CFLAGS) -o $@ $^ -L$(LIBFT_PATH) -lft -L$(MLX_PATH)
+	@$(CC) $(CFLAGS) -o $@ $^ -L$(LIBFT_PATH) -lft -L$(MLX_PATH) -lm
 	@echo "$(NAME): $(GREEN)object files were created$(RESET)"
 	@echo "$(NAME): $(GREEN)$(NAME) was created$(RESET)"
 

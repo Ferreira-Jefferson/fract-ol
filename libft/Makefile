@@ -23,7 +23,7 @@ BONUS_SRC = ft_lstdelone.c ft_lstmap.c ft_lstclear.c \
 EXTRA_SRC = ft_atoi_base.c ft_convert_base.c ft_is_valid_base.c ft_itoa_base.c \
 			ft_putunbr_fd.c ft_realloc.c ft_to_free.c ft_count_decimal_places.c \
 			ft_isspace.c get_next_line.c ft_printf.c ft_isequal.c ft_is_valid_number.c \
-			ft_str_tolower.c ft_str_toupper.c
+			ft_str_tolower.c ft_str_toupper.c ft_strtod.c
 
 UTILS_SRC = ft_print_char.c ft_print_hex_lower.c \
 			ft_print_hex_upper.c ft_print_int.c \

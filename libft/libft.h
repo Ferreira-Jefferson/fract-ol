@@ -6,7 +6,7 @@
 /*   By: jtertuli <jtertuli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/11 07:43:41 by jtertuli          #+#    #+#             */
-/*   Updated: 2025/09/06 14:33:07 by jtertuli         ###   ########.fr       */
+/*   Updated: 2025/09/12 15:48:22 by jtertuli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,7 @@ void	*ft_to_free(void **p);
 int		ft_count_decimal_places(long long int n);
 char	*ft_str_tolower(char *str);
 char	*ft_str_toupper(char *str);
+double	ft_strtod(const char *str, const char **endptr);
 
 char	*get_next_line(int fd);
 int		ft_printf(const char *format, ...);
