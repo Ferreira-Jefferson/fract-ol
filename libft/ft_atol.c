@@ -6,7 +6,7 @@
 /*   By: jtertuli <jtertuli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/13 16:00:18 by jtertuli          #+#    #+#             */
-/*   Updated: 2025/09/12 16:40:39 by jtertuli         ###   ########.fr       */
+/*   Updated: 2025/09/13 14:16:27 by jtertuli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@ static long	ft_create_number(const char *nptr, long nb, int signal)
 	while (ft_isdigit(*nptr))
 	{
 		if ((nb > (LONG_MAX / 10))
-			|| (nb == (LONG_MAX / 10)
-			&& (*nptr - '0') > (LONG_MAX % 10)))
+			|| (nb == (LONG_MAX / 10) && (*nptr - '0') > (LONG_MAX % 10)))
 		{
 			if (signal == 1)
 				return (LONG_MAX);

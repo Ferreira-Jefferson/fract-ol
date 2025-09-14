@@ -6,7 +6,7 @@
 /*   By: jtertuli <jtertuli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/09 07:37:55 by jtertuli          #+#    #+#             */
-/*   Updated: 2025/08/09 07:40:00 by jtertuli         ###   ########.fr       */
+/*   Updated: 2025/09/13 14:02:57 by jtertuli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_binary_len(unsigned int c)
 	if (c == 0)
 		return (1);
 	len = 0;
-	while(c)
+	while (c)
 	{
 		c >>= 1;
 		len++;

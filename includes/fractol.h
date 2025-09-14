@@ -6,7 +6,7 @@
 /*   By: jtertuli <jtertuli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/13 09:29:29 by jtertuli          #+#    #+#             */
-/*   Updated: 2025/09/13 11:46:20 by jtertuli         ###   ########.fr       */
+/*   Updated: 2025/09/13 12:47:53 by jtertuli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@
 # define ON_DESTROY (17)
 # define NO_MOUSE_CLICK_MASK (1L)
 
-int	ft_fractol(char *argv[], t_vars *vars);
+int	ft_fractol(t_vars *vars);
 int	ft_validate_input(int argc, char *argv[], t_vars *vars);
 
 #endif
